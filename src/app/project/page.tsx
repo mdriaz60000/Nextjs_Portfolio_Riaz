@@ -13,37 +13,10 @@ import {
 } from "../../components/ui/card";
 import Image from "next/image";
 import Container from "@/components/shared/Container/Container";
+import { projects } from "@/lib/projectData";
+import Link from "next/link";
 
-const projects = [
-  {
-    title: "E-Commerce Platform",
-    description:
-      "Full-featured online store with cart, checkout, and admin dashboard. Built with React.js, Stripe, and MongoDB.",
-    tags: ["React.js", "TypeScript", "Stripe", "MongoDB"],
-    githubUrl: "https://github.com/mdriaz60000/bike-store-client",
-    liveUrl: "https://bike-store-client-nine.vercel.app/",
-    image: "https://i.ibb.co.com/1G32DjrG/Screenshot-2.png",
-  },
-  {
-    title: "Rental Home Management",
-    description:
-      "Home finder with real-time updates, admin dashboard. Built with Next.js, Stripe, and MongoDB.",
-    tags: ["Next.js", "TypeScript", "Stripe", "MongoDB"],
-    githubUrl: "#",
-    liveUrl: "https://rental-home-management.vercel.app",
-    image: "https://i.ibb.co.com/3JjXtC9/Screenshot-1.png",
-  },
-  {
-    title: "E-Commerce Sunglass",
-    description:
-      "Full-featured online store with cart, checkout, and admin dashboard. Built with React.js, Stripe, and MongoDB",
-    tags: ["React.js", "dashboard", "Stripe", "Mongodb"],
-    githubUrl: "https://github.com/mdriaz60000/z-glass",
-    liveUrl: "https://z-glass.web.app",
-    image:
-      "https://images.unsplash.com/photo-1599658880436-c61792e70672?w=600&auto=format&fit=crop&q=60",
-  },
-];
+
 
 export default function PageProject() {
   return (
@@ -107,13 +80,13 @@ export default function PageProject() {
                 </CardHeader>
                 <CardFooter className="flex justify-between gap-2">
                   <Button variant="outline" size="sm" asChild className="flex-1">
-                    <a
-                      href={project.githubUrl}
+                    <Link
+                      href={`/project/${project.slug}`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Github className="h-4 w-4 mr-2" /> Code
-                    </a>
+                      <Github className="h-4 w-4 mr-2" /> Details
+                    </Link>
                   </Button>
                   <Button size="sm" asChild className="flex-1">
                     <a

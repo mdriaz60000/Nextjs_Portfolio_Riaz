@@ -3,7 +3,7 @@
   import { Button as UIButton } from "../../ui/button";
   import { Badge as UIBadge } from "../../ui/badge";
   import Image from "next/image";
-  import { Atom, Database } from "lucide-react";
+  import { Atom, Database, Github } from "lucide-react";
   import { SiExpress } from "react-icons/si";
   import { RiNextjsFill } from "react-icons/ri";
   import { TbBrandMongodb } from "react-icons/tb";
@@ -110,7 +110,7 @@
                 variants={item}
                 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent"
               >
-                Building Digital Experiences
+                Building Modern Website
               </motion.h1>
 
               <motion.p
@@ -170,7 +170,11 @@
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                     >
-                      View My GitHub
+                          
+                  
+                      <Github className="h-4 w-4 mr-2" /> Github
+                    
+               
                     </MotionButton>
                   </Link>
                 </motion.div>

@@ -33,7 +33,7 @@ export function Navbar() {
             <Button
               key={item.name}
               variant="ghost"
-              className="text-sm font-medium text-foreground/70 hover:text-foreground hover:bg-transparent"
+              className="text-sm  font-medium text-foreground/70 hover:text-foreground hover:bg-transparent hover:underline"
               asChild
             >
               <Link href={item.href}>{item.name}</Link>
